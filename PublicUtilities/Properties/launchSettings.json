@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "PublicUtilities": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7178"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 31965,
+      "useSSL": false
+    }
+  }
+}
