@@ -1,0 +1,17 @@
+trigger:
+  branches:
+    include:
+      - main  # o la rama que prefieras
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: Docker@2
+    displayName: 'Build and Push Docker image'
+    inputs:
+      containerRegistry: 'DockerHub'  # Este es el nombre del servicio de conexión de Docker Hub en Azure DevOps
+      repository: 'ocdamian23/publicutilities:tagname'  # Reemplázalo con tu nombre de usuario y repositorio en Docker Hub
+      command: 'buildAndPush'
+      Dockerfile: 'PublicUtilities/Dockerfile'  # Asegúrate de que la ruta al Dockerfile sea correcta
+      tags: 'latest'  # Puedes usar otras etiquetas si es necesario
