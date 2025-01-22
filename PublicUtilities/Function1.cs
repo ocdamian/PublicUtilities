@@ -23,7 +23,7 @@ namespace PublicUtilities
 
         [FunctionName("Oomapasc")]
         public async Task<IActionResult> GetOomapascInfo(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log, ExecutionContext context)
         {
 
